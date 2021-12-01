@@ -12,6 +12,7 @@
 #include "Pickplayersnames.h"
 #include "randomization.h"
 #include "Whoisfirst.h"
+#include "PrintTable.h"
 using namespace std;
 int main(){
     int i=1;
