@@ -11,6 +11,7 @@
 #include "Pieces.h"
 #include "Pickplayersnames.h"
 #include "randomization.h"
+#include "Whoisfirst.h"
 using namespace std;
 int main(){
     int i=1;
