@@ -1,12 +1,11 @@
 void Infogame(){// Printa todas as regras na tela
 	using namespace std;
-	cout<< "                 Bem Vindo ao nosso Domino                \n";
+	cout<< "             Bem Vindo ao nosso Domino                \n";
 	cout<< "           Seguem as Instrucoes do jogo:              \n";
 	cout<< "==================================================\n";
 	cout<< "1- Todas as pecas disponiveis devem ser utilizadas.  \n";
-	cout<< "Uma vez que o domino possui 28 pecas e 4 players com 7 pecas\n";
-	cout<< "cada um.\n";
-	cout<< "___________________________________________________\n";
+	cout<< "   Serao 7 pecas para cada jogador, totalizando 28 pecas.  \n";
+	cout<< "_________________________________________________________\n";
 	cout<< "2- A jogada so podera ser feita caso o caractere da peca em maos\n";
 	cout<< "Seja igual ao caractere das pecas nas extremidades da mesa.\n";
 	cout<< "3-As pecas contem caracteres que sao escolhidos pelos jogadores\n";
@@ -28,6 +27,7 @@ void Infogame(){// Printa todas as regras na tela
 	cout<< "9-Nao e permitido jogadores com nomes iguais      \n";
 	cout<< "ou caracteres de pecas iguais \n";
 	cout<< "____________________________________________________\n";
+	cout<< "Grupo: Arthur Sant'Anna; Enzo Gebauer; Luiz Gabriel Guimaraes; Vinicius de Araujo       \n";
 	cout<< "          Digite Qualquer coisa para continuar     \n";
 	system("pause");
 }
