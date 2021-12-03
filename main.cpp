@@ -27,6 +27,7 @@ int main(){
     printf("\nApos a escolha das pecas e dos nomes do jogadores, QUE COMECE O JOGO!!!\n");
     while(true){ //while que representa o começo do jogo.
     PlayGame(Players[Turn].Piece,Players[Turn].Name,Table);
+    //lalalalalala
     }
 return 0;
 }
