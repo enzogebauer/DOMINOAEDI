@@ -4,15 +4,15 @@ void PickNames(){
     printf("===========================================\n");
     printf("******* Digite o nome do primeiro jogador *******\n");
     printf("===========================================\n");
-    std::cin >> jogadores[0].name;
+    std::cin >> Players[0].Name;
     while(1){
     system("cls");
     printf("              Player two              \n");
     printf("===========================================\n");
     printf("******* Digite o nome do segundo jogador *******\n");
     printf("===========================================\n");
-    std::cin >> jogadores[1].name;
-     if((jogadores[1].name.compare(jogadores[0].name)!=0))
+    std::cin >> Players[1].Name;
+     if((Players[1].Name.compare(Players[0].Name)!=0))
      break;
     
      system("cls");
@@ -27,9 +27,9 @@ void PickNames(){
     printf("===========================================\n");
     printf("*** Digite o nome do terceiro jogador  ***\n");
     printf("===========================================\n");
-    std::cin >> jogadores[3].name;
+    std::cin >> Players[3].Name;
 
-     if((jogadores[3].name.compare(jogadores[0].name)!=0) && (jogadores[3].name.compare(jogadores[1].name)!=0) && (jogadores[3].name.compare(jogadores[2].name)!=0))
+     if((Players[3].Name.compare(Players[0].Name)!=0) && (Players[3].Name.compare(Players[1].Name)!=0) && (Players[3].Name.compare(Players[2].Name)!=0))
      break;
 
      system("cls");
@@ -45,9 +45,9 @@ void PickNames(){
     printf("===========================================\n");
     printf("****  Digite o nome do quarto jogador  ****\n");
     printf("===========================================\n");
-    std::cin >> jogadores[4].name;
+    std::cin >> Players[4].Name;
 
-     if((jogadores[4].name.compare(jogadores[0].name)!=0) && (jogadores[4].name.compare(jogadores[1].name)!=0) && (jogadores[4].name.compare(jogadores[2].name)!=0 && jogadores[4].name.compare(jogadores[3].name)!=0))
+     if((Players[4].Name.compare(Players[0].Name)!=0) && (Players[4].Name.compare(Players[1].Name)!=0) && (Players[4].Name.compare(Players[2].Name)!=0 && Players[4].Name.compare(Players[3].Name)!=0))
      break;
 
      system("cls");

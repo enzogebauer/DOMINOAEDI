@@ -1,10 +1,10 @@
-void PrintTable(std::list <std::pair <char,char> > l, std:: string name, std:: list<std::pair<char,char>>table){
+void PrintTable(std::list <std::pair <char,char> > Pieces, std:: string Name, std:: list<std::pair<char,char>>Table){
     system("cls");
-    std::cout << "                                             "<<name<< "\n";
+    std::cout << "                                             "<<Name<< "\n";
     std:: cout <<"n\n                                             Pecas:\n\n";
     std::cout << "                                ";
-    l.sort();
-    for(int i = 0; i < l.size() ; i++){
+    Pieces.sort();
+    for(int i = 0; i < Pieces.size() ; i++){
  	std::cout << "  " << i+1  << "   "; 
 }
  
@@ -12,18 +12,18 @@ void PrintTable(std::list <std::pair <char,char> > l, std:: string name, std:: l
  
  std::cout << "\n" << "                                ";
 	
-	while(!l.empty()){
- 	std::cout << "[" << l.front().first <<  "|" <<l.front().second << "] "; 
- 	l.pop_front();
+	while(!Pieces.empty()){
+ 	std::cout << "[" << Pieces.front().first <<  "|" <<Pieces.front().second << "] "; 
+ 	Pieces.pop_front();
 }
 printf("\n\n\n========================================================================================================================\n\n\n");
  
- if(primeiravez != 0){
+ if(Firsttime != 0){ 
  
- while(!mesa.empty()){
+ while(!Table.empty()){
  
- std::cout << "[" << mesa.front().first << "|" <<   mesa.front().second << "]";
- mesa.pop_front();
+ std::cout << "[" << Table.front().first << "|" <<   Table.front().second << "]";
+ Table.pop_front();
 }
 
 }

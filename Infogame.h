@@ -1,7 +1,7 @@
 void Infogame(){// Printa todas as regras na tela
 	using namespace std;
 	cout<< "             Bem Vindo ao nosso Domino                \n";
-	cout<< "           Seguem as Instrucoes do jogo:              \n";
+	cout<< "\n           Seguem as Instrucoes do jogo:              \n";
 	cout<< "==================================================\n";
 	cout<< "1- Todas as pecas disponiveis devem ser utilizadas.  \n";
 	cout<< "   Serao 7 pecas para cada jogador, totalizando 28 pecas.  \n";
