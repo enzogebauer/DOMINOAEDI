@@ -15,6 +15,7 @@
 #include "PrintTable.h"
 #include "restart.h"
 #include "PLaygame.h"
+#include "Skipturn.h"
 using namespace std;
 int main(){
     int i=1;
