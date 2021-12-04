@@ -16,5 +16,6 @@ struct player{ // struct do jogadores, armazena as variaveis a mao de cada jogad
 int Firsttime = 0; //indica quem e o primeiro jogador
 int Turn; //indica a vez de cada jogador
 int Notgoingtoanywhere;
+int Choicee;
 
 

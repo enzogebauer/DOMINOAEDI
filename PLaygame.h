@@ -5,7 +5,7 @@ int choice; // selecionar peca
 std:: list <std::pair<char,char> > aux; // lista onde serao guardadas as peças que forem
                                         // tiradas da mao do jogador e depois adicionadas na mesa de jogo oficial.
     while((Turna == 0)){
-        if(SkipTurn(Piece,Table) ==false || Table.empty()){ // Se tiver peca valida na mao do jogador ou a lista estiver vazia entra no if
+        if(SkipTurn(Piece,Table) == false || Table.empty()){ // Se tiver peca valida na mao do jogador ou a lista estiver vazia entra no if
         Notgoingtoanywhere = 0; //Variavel responsavel por indicar quando todos os jogadores passaram suas vezes
         system("cls");
         PrintTable(Piece,Name,Table); // imprimindo a mesa de jogo

@@ -21,7 +21,28 @@ int main(){
     Infogame();
     FPieces();
     PickNames();
-    RestartGame(); 
+    while(Choicee != 3){
+        system("cls");
+        cout<< "_______________________\n";
+        cout<< "        GAME MENU        ";
+        cout<< "_______________________\n";
+        cout<< "1-      PLAY GAME      \n";
+        cout<< "2-        SCORE        \n";
+        cout<< "3-        EXIT           ";
+        cout<< "_______________________  ";
+
+        cin>> Choicee;
+
+        if(Choicee == 1){
+            RestartGame();
+            while(true){
+                PlayGame(Players[Turn].Piece,Players[Turn].Name,Table);
+                
+            } 
+        }
+
+
+    }
     // agora entra a parte da entrega das pecas a cada jogador, essa entrega tem que ser feita de maneira aleatoria
     // Visando entregar um jogo justo para todos os envolvidos
     printf("\nApos a escolha das pecas e dos nomes do jogadores, QUE COMECE O JOGO!!!\n");
