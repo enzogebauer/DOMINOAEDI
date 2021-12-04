@@ -55,6 +55,9 @@
         "numeric": "cpp",
         "random": "cpp",
         "string": "cpp",
-        "sstream": "cpp"
+        "sstream": "cpp",
+        "string_view": "cpp",
+        "bit": "cpp",
+        "optional": "cpp"
     }
 }
