@@ -24,6 +24,6 @@ void Infogame(){// Printa todas as regras na tela
 	cout<< "8) Não podem ter players com o mesmo nome.                                       \n";
 	cout<< "=================================================================================\n";
 	cout<< "Grupo: Arthur Sant'Anna; Enzo Gebauer; Luiz Gabriel Guimarães; Vinícius de Araújo\n";
-	cout<< "                        Digite 'iniciar' para continuar                          \n";
+	cout<< "                       Digite 'iniciar' para continuar                           \n";
 	system("pause");
 }
