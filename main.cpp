@@ -8,7 +8,6 @@
 #include <fstream>
 #include "Infogame.h"
 #include "Variables.h"
-#include "Pieces.h"
 #include "Pickplayersnames.h"
 #include "randomization.h"
 #include "Whoisfirst.h"
@@ -20,7 +19,7 @@ using namespace std;
 int main(){
     int i=1;
     Infogame();
-    PickPieces();
+    FPieces();
     PickNames();
     RestartGame(); 
     // agora entra a parte da entrega das pecas a cada jogador, essa entrega tem que ser feita de maneira aleatoria

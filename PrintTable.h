@@ -1,10 +1,10 @@
-void PrintTable(std::list <std::pair <char,char> > Pieces, std:: string Name, std:: list<std::pair<char,char>>Table){
+void PrintTable(std::list <std::pair <char,char> > Piece, std:: string Name, std:: list<std::pair<char,char>>Table){
     system("cls");
     std::cout << "                                             "<<Name<< "\n";
     std:: cout <<"n\n                                             Pecas:\n\n";
     std::cout << "                                ";
-    Pieces.sort();
-    for(int i = 0; i < Pieces.size() ; i++){
+    Piece.sort();
+    for(int i = 0; i < Piece.size() ; i++){
  	std::cout << "  " << i+1  << "   "; 
 }
  
@@ -12,11 +12,11 @@ void PrintTable(std::list <std::pair <char,char> > Pieces, std:: string Name, st
  
  std::cout << "\n" << "                                ";
 	
-	while(!Pieces.empty()){
- 	std::cout << "[" << Pieces.front().first <<  "|" <<Pieces.front().second << "] "; 
- 	Pieces.pop_front();
+	while(!Piece.empty()){
+ 	std::cout << "[" << Piece.front().first <<  "|" <<Piece.front().second << "] "; 
+ 	Piece.pop_front();
 }
-printf("\n\n\n========================================================================================================================\n\n\n");
+cout<< "\n\n\n========================================================================================================================\n\n\n";
  
  if(Firsttime != 0){ 
  
@@ -28,7 +28,7 @@ printf("\n\n\n==================================================================
 
 }
  
- printf("\n\n\n\n\n\n========================================================================================================================\n");
+ cout<< "\n\n\n\n\n\n========================================================================================================================\n";
  
  	
 		
