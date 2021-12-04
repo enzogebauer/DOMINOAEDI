@@ -1,0 +1,1 @@
+void OrganizeHand (std::list <std::pair <char,char>> &Piece)

@@ -11,7 +11,7 @@ void PrintTable(std::list <std::pair <char,char> > Piece, std:: string Name, std
  
  
  std::cout << "\n" << "                                ";
-	
+	OrganizeHand()
 	while(!Piece.empty()){
  	std::cout << "[" << Piece.front().first <<  "|" <<Piece.front().second << "] "; 
  	Piece.pop_front();

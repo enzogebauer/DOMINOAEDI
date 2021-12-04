@@ -2,7 +2,7 @@ int SkipTurn(std::list <std::pair<char,char> > List,std::list <std::pair<char,ch
 
     while(!List.empty()){
 
-        if(List.front().first ==Table.front().first || List.front().second == Table.front().first || List.back().first == Table.back().second || List.front().second == Table.back().second){
+        if(List.front().first == Table.front().first || List.front().second == Table.front().first || List.back().first == Table.back().second || List.front().second == Table.back().second){
             return false;
         }
         List.pop_front();
