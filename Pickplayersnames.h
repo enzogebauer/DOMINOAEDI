@@ -28,9 +28,9 @@ void PickNames(){
     cout<< "===========================================\n";
     cout<< "*** Digite o nome do terceiro jogador  ***\n";
     cout<< "===========================================\n";
-    cin >> Players[3].Name;
+    cin >> Players[2].Name;
 
-     if((Players[3].Name.compare(Players[0].Name)!=0) && (Players[3].Name.compare(Players[1].Name)!=0) && (Players[3].Name.compare(Players[2].Name)!=0))
+     if((Players[2].Name.compare(Players[0].Name)!=0) && (Players[2].Name.compare(Players[1].Name)!=0))
      break;
 
      system("cls");
@@ -46,13 +46,14 @@ void PickNames(){
     cout<< "===========================================\n";
     cout<< "****  Digite o nome do quarto jogador  ****\n";
     cout<< "===========================================\n";
-    cin >> Players[4].Name;
+    cin >> Players[3].Name;
 
-     if((Players[4].Name.compare(Players[0].Name)!=0) && (Players[4].Name.compare(Players[1].Name)!=0) && (Players[4].Name.compare(Players[2].Name)!=0 && Players[4].Name.compare(Players[3].Name)!=0))
+     if((Players[3].Name.compare(Players[0].Name)!=0) && (Players[3].Name.compare(Players[1].Name)!=0) && (Players[3].Name.compare(Players[2].Name)!=0))
      break;
 
      system("cls");
      cout << "Sem nomes iguais cara!\n\n";
      system("pause");
     }
+    fflush(stdin);
 }

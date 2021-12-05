@@ -1,19 +1,22 @@
-void PlayGame(std::list <std::pair<char,char> > &Piece, std::string Name,std::list <std::pair<char,char> > &Table){
+void PlayGame(std::list <std::pair<char,char> > &Piece,std::list <std::pair<char,char> > &Table, std::string Name){
 char lado; // sera o lado da lista onde será adicionada a peça já no mesa de jogo
-int Turna=0; // Turna ira determinar se o Turno avançou
+int next=0; // next ira determinar se o Turno avançou
 int choice; // selecionar peca
+
 std:: list <std::pair<char,char> > aux; // lista onde serao guardadas as peças que forem
                                         // tiradas da mao do jogador e depois adicionadas na mesa de jogo oficial.
-    while((Turna == 0)){
+    while(next == 0){
+        
         if(SkipTurn(Piece,Table) == false || Table.empty()){ // Se tiver peca valida na mao do jogador ou a lista estiver vazia entra no if
-        Notgoingtoanywhere = 0; //Variavel responsavel por indicar quando todos os jogadores passaram suas vezes
+       
+        Unentschieden = 0; //Variavel responsavel por indicar quando todos os jogadores passaram suas vezes
         system("cls");
-        PrintTable(Piece,Name,Table); // imprimindo a mesa de jogo
-        std::cout << "Selecione qual pedra desejas jogar";
+        PrintTable(Piece,Name,Table); // imprimindo a mesa de jogo, mao do jogador que começa e com o nome dele
+        std::cout << "Selecione qual pedra desejas jogar\n";
         std::cin>>choice;
         fflush(stdin); //limpa o cursor simbolo de digitando
         Piece.sort(); // embaralha  mao do jogador
-        if(choice <= Piece.size()){
+        if(0 < choice <= Piece.size()){
         choice--;
     
         for(int i = 0; i<choice;i++){
@@ -31,7 +34,7 @@ std:: list <std::pair<char,char> > aux; // lista onde serao guardadas as peças 
                     aux.pop_back();                // e esvazia a auxiliar 
                 }
                 Firsttime++;
-                Turna++;
+                next++;
                 
             
             }else{
@@ -42,16 +45,16 @@ std:: list <std::pair<char,char> > aux; // lista onde serao guardadas as peças 
             std::cout << "1/1 adicionado a mesa! \n";
             system("pause");
     }
-    }else{//depois da primeira vez o usuario decide o lado em que a peca sera jogada
-        std::cout << "Voce quer jogar na direita ou na esquerda? Digite 's' para esquerda e 'd'' para direita: \n";
+        }else{//depois da primeira vez o usuario decide o lado em que a peca sera jogada
+        std::cout << "Voce quer jogar na direita ou na esquerda? Digite 'a' para esquerda e 'd'' para direita: \n";
 		std::cin >>lado;
-        if(lado == 's'){//vai comparar o valor da peca as extremidades esquerda da mesa
+        if(lado == 'a'){//vai comparar o valor da peca as extremidades esquerda da mesa
 
         if(Piece.front().first == Table.front().first){
             std::swap(Piece.front().first,Piece.front().second);//swap funcao responsavel por "rodar" a peca
             Table.push_front(Piece.front());
             Piece.pop_front();
-            Turna++;
+            next++;
             while(!aux.empty()){
 			Piece.push_front(aux.back());
 			aux.pop_back();
@@ -59,7 +62,7 @@ std:: list <std::pair<char,char> > aux; // lista onde serao guardadas as peças 
     }else if(Piece.front().second == Table.front().first){
         Table.push_front(Piece.front());
         Piece.pop_front();
-        Turna++;
+        next++;
         while(!aux.empty()){
 			Piece.push_front(aux.back());
 			aux.pop_back();
@@ -69,7 +72,7 @@ std:: list <std::pair<char,char> > aux; // lista onde serao guardadas as peças 
             Piece.push_front(aux.back());
 			aux.pop_back();
         }
-        std::cout << "Você selecionou uma pedra invalida!!!\n";
+        std::cout << "JOGADA INVALIDA!!!\n";
         system("pause");
     }
 
@@ -78,7 +81,7 @@ std:: list <std::pair<char,char> > aux; // lista onde serao guardadas as peças 
 		if (Piece.front().first == Table.back().second ){
 		Table.push_back(Piece.front());
 		Piece.pop_front();
-		Turna++;
+		next++;
 		while(!aux.empty()){
 			Piece.push_front(aux.back());
 			aux.pop_back();
@@ -87,7 +90,7 @@ std:: list <std::pair<char,char> > aux; // lista onde serao guardadas as peças 
 		std::swap(Piece.front().first,Piece.front().second);
 		Table.push_back(Piece.front());
 		Piece.pop_front();
-		Turna++;
+		next++;
 		while(!aux.empty()){
 			Piece.push_front(aux.back());
 			aux.pop_back();
@@ -112,16 +115,16 @@ std:: list <std::pair<char,char> > aux; // lista onde serao guardadas as peças 
 }
 }else{
 	
-	std::cout << "Selecione uma direcao invalida\n";
+	std::cout << "Selecione uma pedra valida\n";
 	system("pause");
 	
 }
 	
 }else{
-	Notgoingtoanywhere++;
+	Unentschieden++;
 	system("cls");
 	PrintTable(Piece,Name,Table);
-	std::cout << "Voce passou a vez\n";
+	std::cout << "lost turn\n";
 	
 	system("pause");
 	
@@ -130,4 +133,5 @@ std:: list <std::pair<char,char> > aux; // lista onde serao guardadas as peças 
 	
 }
 
+}
 }
