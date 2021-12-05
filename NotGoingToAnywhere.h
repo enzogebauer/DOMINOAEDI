@@ -23,9 +23,51 @@ int NotGoingToAnywhere(){
         Winners.push_back(Player[1].Name);
         Winners.push_back(Player[2].Name);
         Winners.push_back(Player[3].Name);
-    }else if(sum1 == sum2 && sum1 == sum3 && sum1 < sum4){
+    }else if(sum1 == sum2 == sum3 < sum4){
         Winners.push_back(Player[0].Name);
         Winners.push_back(Player[1].Name);
         Winners.push_back(Player[2].Name);
+    }else if(sum1 == sum2 == sum4 < sum3){
+        Winners.push_back(Player[0].Name);
+        Winners.push_back(Player[1].Name);
+        Winners.push_back(Player[3].Name);
+    }else if(sum1 == sum3 == sum4 < sum2){
+        Winners.push_back(Player[0].Name);
+        Winners.push_back(Player[2].Name);
+        Winners.push_back(Player[3].Name);
+    }else if(sum1 == sum2 == sum4 < sum3){
+        Winners.push_back(Player[0].Name);
+        Winners.push_back(Player[1].Name);
+        Winners.push_back(Player[3].Name);
+    }else if(sum1 == sum2 && sum1 < sum4 && sum1 < sum3){
+        Winners.push_back(Player[0].Name);
+        Winners.push_back(Player[1].Name);
+    }else if(sum1 == sum3 && sum1 < sum4 && sum1 < sum2){
+        Winners.push_back(Player[0].Name);
+        Winners.push_back(Player[2].Name);
+    }else if(sum1 == sum4 && sum1 < sum3 && sum1 < sum2){
+        Winners.push_back(Player[0].Name);
+        Winners.push_back(Player[3].Name);
+    }else if(sum1 < sum3 && sum1 < sum4 && sum1 < sum2){
+        Winners.push_back(Player[0].Name);
+    }else if(sum4 == sum2 == sum3 < sum1){
+        Winners.push_back(Player[1].Name);
+        Winners.push_back(Player[2].Name);
+        Winners.push_back(Player[3].Name);
+    }else if(sum2 == sum3 && sum2 < sum4 && sum2 < sum1){
+        Winners.push_back(Player[1].Name);
+        Winners.push_back(Player[2].Name);
+    }else if(sum2 == sum4 && sum2 < sum3 && sum2 < sum1){
+        Winners.push_back(Player[1].Name);
+        Winners.push_back(Player[3].Name);
+    }else if(sum2 < sum3 && sum2 < sum4 && sum2 < sum1){
+        Winners.push_back(Player[1].Name);
+    }else if(sum3 == sum4 && sum3 < sum2 && sum3 < sum1){
+        Winners.push_back(Player[2].Name);
+        Winners.push_back(Player[3].Name);
+    }else if(sum3 < sum4 && sum3 < sum2 && sum3 < sum1){
+        Winners.push_back(Player[2].Name);
+    }else if(sum4 < sum3 && sum4 < sum2 && sum4 < sum1){
+        Winners.push_back(Player[3].Name);
     }
 }
