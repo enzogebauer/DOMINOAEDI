@@ -1,7 +1,7 @@
 void PrintTable(std::list <std::pair <char,char> > Piece, std:: string Name, std:: list<std::pair<char,char>>Table){
     system("cls");
     
-    std::cout << "\n                                             "<<Name<< "\n";
+    std::cout << "\n                                          "<<Name<< "\n";
     
     std:: cout <<"\n                                             Pecas:\n\n";
     

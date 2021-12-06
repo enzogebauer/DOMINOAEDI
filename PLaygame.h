@@ -106,7 +106,7 @@ std:: list <std::pair<char,char> > aux; // lista onde serao guardadas as peças 
 	}
 		
 		
-	}else{
+	}else if(side != a && side != d){
 		
 	std::cout << "Voce selecinou uma direcao invalida\n";
 		system("pause");
