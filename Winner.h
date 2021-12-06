@@ -1,7 +1,7 @@
 void Winner(std::string Name){
     system ("cls");
-    std::cout<< "\n===========!WINNER!===========\n";
-    std::cout<< "\n          "<<Name<<"          \n";
+    std::cout<< "\n============!WINNER!===========\n";
+    std::cout<< "             "<<Name<<"          \n";
     std::cout<< "================================\n";
     std::cout<< "________________________________\n";
     std::cout<< "________________________________\n";

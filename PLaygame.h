@@ -1,5 +1,5 @@
 void PlayGame(std::list <std::pair<char,char> > &Piece,std::list <std::pair<char,char> > &Table, std::string Name){
-char lado; // sera o lado da lista onde será adicionada a peça já no mesa de jogo
+char side; // sera o side da lista onde será adicionada a peça já no mesa de jogo
 int next=0; // next ira determinar se o Turno avançou
 int choice; // selecionar peca
 
@@ -9,7 +9,7 @@ std:: list <std::pair<char,char> > aux; // lista onde serao guardadas as peças 
         
         if(SkipTurn(Piece,Table) == false || Table.empty()){ // Se tiver peca valida na mao do jogador ou a lista estiver vazia entra no if
        
-        Unentschieden = 0; //Variavel responsavel por indicar quando todos os jogadores passaram suas vezes
+        Unentschieden = 0; //Variavel responsavel por indicar quando todos os jogadores passaram suas vezes para determinar quando o jogo tranca
         system("cls");
         PrintTable(Piece,Name,Table); // imprimindo a mesa de jogo, mao do jogador que começa e com o nome dele
         std::cout << "Selecione qual pedra desejas jogar\n";
@@ -45,10 +45,10 @@ std:: list <std::pair<char,char> > aux; // lista onde serao guardadas as peças 
             std::cout << "1/1 adicionado a mesa! \n";
             system("pause");
     }
-        }else{//depois da primeira vez o usuario decide o lado em que a peca sera jogada
+        }else{//depois da primeira vez o usuario decide o side em que a peca sera jogada
         std::cout << "Voce quer jogar na direita ou na esquerda? Digite 'a' para esquerda e 'd'' para direita: \n";
-		std::cin >>lado;
-        if(lado == 'a'){//vai comparar o valor da peca as extremidades esquerda da mesa
+		std::cin >>side;
+        if(side == 'a'){//vai comparar o valor da peca as extremidades esquerda da mesa
 
         if(Piece.front().first == Table.front().first){
             std::swap(Piece.front().first,Piece.front().second);//swap funcao responsavel por "rodar" a peca
@@ -76,7 +76,7 @@ std:: list <std::pair<char,char> > aux; // lista onde serao guardadas as peças 
         system("pause");
     }
 
-    }else if (lado == 'd'){// faz a mesma coisa do lado esquerdo  mais comparando com a extremidade direita da mesa
+    }else if (side == 'd'){// faz a mesma coisa do side esquerdo  mais comparando com a extremidade direita da mesa
 		
 		if (Piece.front().first == Table.back().second ){
 		Table.push_back(Piece.front());

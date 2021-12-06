@@ -3,14 +3,14 @@ void PickNames(){
     system("cls");
     cout<< "                 Player one                \n";
     cout<< "===========================================\n";
-    cout<< "******* Digite o nome do primeiro jogador *******\n";
+    cout<< "        Digite o nome do primeiro jogador  \n";
     cout<< "===========================================\n";
     cin >> Players[0].Name;
     while(1){
     system("cls");
-    cout<< "              Player two              \n";
+    cout<< "                   Player two              \n";
     cout<< "===========================================\n";
-    cout<< "******* Digite o nome do segundo jogador *******\n";
+    cout<< "        Digite o nome do segundo jogador   \n";
     cout<< "===========================================\n";
     cin >> Players[1].Name;
      if((Players[1].Name.compare(Players[0].Name)!=0))
@@ -24,9 +24,9 @@ void PickNames(){
     while(1){
 
         system("cls");
-        cout<< "              Player three              \n";
+    cout<< "                  Player three             \n";
     cout<< "===========================================\n";
-    cout<< "*** Digite o nome do terceiro jogador  ***\n";
+    cout<< "     Digite o nome do terceiro jogador     \n";
     cout<< "===========================================\n";
     cin >> Players[2].Name;
 
@@ -42,9 +42,9 @@ void PickNames(){
     while(1){
 
         system("cls");
-        cout<<"              Player four              \n";
+    cout<<"                   Player four              \n";
     cout<< "===========================================\n";
-    cout<< "****  Digite o nome do quarto jogador  ****\n";
+    cout<< "      Digite o nome do quarto jogador      \n";
     cout<< "===========================================\n";
     cin >> Players[3].Name;
 

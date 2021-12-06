@@ -4,7 +4,7 @@ std:: pair <char,char> pair;
 // para a entrega das Piecess ocorrer de forma aleatoria iremos utilizar uma lista dupla com dois elementos por index
 // e um vetor de pares para que seja possível organizarmos as Piecess em pares a partir do  de caractere de cada uma
 void randomization(){
-pair.first = Pieces[0];//branco
+	pair.first = Pieces[0];//branco
 	pair.second = Pieces[0];
 	gamepieces.push_back(pair);
 	pair.second = Pieces[1];
@@ -55,11 +55,11 @@ pair.first = Pieces[0];//branco
 	pair.first = Pieces[4];//quadra
 	pair.second = Pieces[4];
 	gamepieces.push_back(pair);
-	pair.second = Pieces[5];//quina
+	pair.second = Pieces[5];
 	gamepieces.push_back(pair);
 	pair.second = Pieces[6];
 	gamepieces.push_back(pair);
-	pair.first = Pieces[5];
+	pair.first = Pieces[5];//quina
 	pair.second = Pieces[5];
 	gamepieces.push_back(pair);
 	pair.second = Pieces[6];

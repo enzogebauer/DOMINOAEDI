@@ -1,15 +1,15 @@
 void PrintWinners(){
     system("cls");
-	printf("------------------------------------------------\n");
-	printf("\n\n");
-	printf("             Winners:  \n");
+	std::cout<<"------------------------------------------------\n";
+	std::cout<< "\n";
+	std::cout<< "                      Winners:                  \n\n";
 	while(!Winners.empty()){
 	
 	std::cout<<"               "<<Winners.front()<<"\n";
 	Winners.pop_front();
 }
 
-	printf("------------------------------------------------\n");
+	std::cout<< "------------------------------------------------\n";
 	
 	system("pause");
 }

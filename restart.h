@@ -1,4 +1,4 @@
-void RestartGame(){// seta o jogo para o começo
+void RestartGame(){// Reseta o jogo para o começo
     for(int i=0;i<4;i++){
         Firsttime = 0;
         while(!Players[i].Piece.empty()){
