@@ -17,8 +17,10 @@
 #include "restart.h"
 #include "Skipturn.h"
 #include "PLaygame.h"
+#include "Winners.h"
 #include "Unentschieden.h"
 #include "Winner.h"
+
 using namespace std;
 
 int main(){
@@ -34,10 +36,11 @@ int main(){
                 if(Players[Turn].Piece.empty()){
                     Winner(Players[Turn].Name);
                     break;
-                 }else if(Unentschieden == 4){
+                }else if(Unentschieden == 4){
+
                      Unentschiedenf();
                      break;
-                 }
+                }
                 Turn++;
                 if(Turn>=4){
                     Turn = 0;

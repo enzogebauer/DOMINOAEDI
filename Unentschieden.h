@@ -1,74 +1,148 @@
 
 void Unentschiedenf(){
-    int sum1 = 0, sum2 = 0, sum3 = 0, sum4 = 0;
-    
-    while(!Players[0].Piece.empty()){
-        sum1 = sum1 + (Piece.first()+Piece.second());
-        Piece.pop_back();
-    }
-    while(!Players[1].Piece.empty()){
-        sum2 = sum2 + (Piece.first()+Piece.second());
-        Piece.pop_back();
-    }
-    while(!Players[2].Piece.empty()){
-        sum3 = sum3 + (Piece.first()+Piece.second());
-        Piece.pop_back();
-    }
-    while(!Players[3].Piece.empty()){
-        sum4 = sum4 + (Piece.first()+Piece.second());
-        Piece.pop_back();
+    int sum[4];
+    for(int j = 0; j < 4; j++){
+        sum[j] = 0;
+        for(int i = 0; i < Players[j].Piece.size(); i++){
+            sum[j] = sum[j] + (Players[j].Piece.front().first + Players[j].Piece.front().second);
+            Players[j].Piece.pop_front();
+        }
+    /*sum[0] = soma do primeiro
+    sum[1] = soma do segundo
+    sum[2] = soma do terceiro
+    sum[3] = soma do quarto*/
     }
 
-    if(sum1 == sum2 == sum3 == sum4){
+    if(sum[0] == sum[1] == sum[2] == sum[3]){
         Winners.push_back(Players[0].Name);
         Winners.push_back(Players[1].Name);
         Winners.push_back(Players[2].Name);
         Winners.push_back(Players[3].Name);
-    }else if(sum1 == sum2 == sum3 < sum4){
+    }else if(sum[0] == sum[1] == sum[2] < sum[3]){
         Winners.push_back(Players[0].Name);
         Winners.push_back(Players[1].Name);
         Winners.push_back(Players[2].Name);
-    }else if(sum1 == sum2 == sum4 < sum3){
+    }else if(sum[0] == sum[1] == sum[3] < sum[2]){
         Winners.push_back(Players[0].Name);
         Winners.push_back(Players[1].Name);
         Winners.push_back(Players[3].Name);
-    }else if(sum1 == sum3 == sum4 < sum2){
+    }else if(sum[0] == sum[2] == sum[3] < sum[1]){
         Winners.push_back(Players[0].Name);
         Winners.push_back(Players[2].Name);
         Winners.push_back(Players[3].Name);
-    }else if(sum1 == sum2 == sum4 < sum3){
+    }else if(sum[0] == sum[1] && sum[0] < sum[3] && sum[0] < sum[2]){
         Winners.push_back(Players[0].Name);
         Winners.push_back(Players[1].Name);
-        Winners.push_back(Players[3].Name);
-    }else if(sum1 == sum2 && sum1 < sum4 && sum1 < sum3){
-        Winners.push_back(Players[0].Name);
-        Winners.push_back(Players[1].Name);
-    }else if(sum1 == sum3 && sum1 < sum4 && sum1 < sum2){
+    }else if(sum[0] == sum[2] && sum[0] < sum[3] && sum[0] < sum[1]){
         Winners.push_back(Players[0].Name);
         Winners.push_back(Players[2].Name);
-    }else if(sum1 == sum4 && sum1 < sum3 && sum1 < sum2){
+    }else if(sum[0] == sum[3] && sum[0] < sum[2] && sum[0] < sum[1]){
         Winners.push_back(Players[0].Name);
         Winners.push_back(Players[3].Name);
-    }else if(sum1 < sum3 && sum1 < sum4 && sum1 < sum2){
+    }else if(sum[0] < sum[2] && sum[0] < sum[3] && sum[0] < sum[1]){
         Winners.push_back(Players[0].Name);
-    }else if(sum4 == sum2 == sum3 < sum1){
+    }else if(sum[3] == sum[1] == sum[2] < sum[0]){
         Winners.push_back(Players[1].Name);
         Winners.push_back(Players[2].Name);
         Winners.push_back(Players[3].Name);
-    }else if(sum2 == sum3 && sum2 < sum4 && sum2 < sum1){
+    }else if(sum[1] == sum[2] && sum[1] < sum[3] && sum[1] < sum[0]){
         Winners.push_back(Players[1].Name);
         Winners.push_back(Players[2].Name);
-    }else if(sum2 == sum4 && sum2 < sum3 && sum2 < sum1){
+    }else if(sum[1] == sum[3] && sum[1] < sum[2] && sum[1] < sum[0]){
         Winners.push_back(Players[1].Name);
         Winners.push_back(Players[3].Name);
-    }else if(sum2 < sum3 && sum2 < sum4 && sum2 < sum1){
+    }else if(sum[1] < sum[2] && sum[1] < sum[3] && sum[1] < sum[0]){
         Winners.push_back(Players[1].Name);
-    }else if(sum3 == sum4 && sum3 < sum2 && sum3 < sum1){
+    }else if(sum[2] == sum[3] && sum[2] < sum[1] && sum[2] < sum[0]){
         Winners.push_back(Players[2].Name);
         Winners.push_back(Players[3].Name);
-    }else if(sum3 < sum4 && sum3 < sum2 && sum3 < sum1){
+    }else if(sum[2] < sum[3] && sum[2] < sum[1] && sum[2] < sum[0]){
         Winners.push_back(Players[2].Name);
-    }else if(sum4 < sum3 && sum4 < sum2 && sum4 < sum1){
+    }else if(sum[3] < sum[2] && sum[3] < sum[1] && sum[3] < sum[0]){
         Winners.push_back(Players[3].Name);
     }
+    PrintWinners();
+    
 }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    /*if(sum[0] == sum[1] == sum[2] == sum[3]){
+        Winners.push_back(Players[0].Name);
+        Winners.push_back(Players[1].Name);
+        Winners.push_back(Players[2].Name);
+        Winners.push_back(Players[3].Name);
+    }else if(sum[0] == sum[1] == sum[2] < sum[3]){
+        Winners.push_back(Players[0].Name);
+        Winners.push_back(Players[1].Name);
+        Winners.push_back(Players[2].Name);
+    }else if(sum[0] == sum[1] == sum[3] < sum[2]){
+        Winners.push_back(Players[0].Name);
+        Winners.push_back(Players[1].Name);
+        Winners.push_back(Players[3].Name);
+    }else if(sum[0] == sum[2] == sum[3] < sum[1]){
+        Winners.push_back(Players[0].Name);
+        Winners.push_back(Players[2].Name);
+        Winners.push_back(Players[3].Name);
+    }else if(sum[0] == sum[1] == sum[3] < sum[2]){
+        Winners.push_back(Players[0].Name);
+        Winners.push_back(Players[1].Name);
+        Winners.push_back(Players[3].Name);
+    }else if(sum[0] == sum[1] && sum[0] < sum[3] && sum[0] < sum[2]){
+        Winners.push_back(Players[0].Name);
+        Winners.push_back(Players[1].Name);
+    }else if(sum[0] == sum[2] && sum[0] < sum[3] && sum[0] < sum[1]){
+        Winners.push_back(Players[0].Name);
+        Winners.push_back(Players[2].Name);
+    }else if(sum[0] == sum[3] && sum[0] < sum[2] && sum[0] < sum[1]){
+        Winners.push_back(Players[0].Name);
+        Winners.push_back(Players[3].Name);
+    }else if(sum[0] < sum[2] && sum[0] < sum[3] && sum[0] < sum[1]){
+        Winners.push_back(Players[0].Name);
+    }else if(sum[3] == sum[1] == sum[2] < sum[0]){
+        Winners.push_back(Players[1].Name);
+        Winners.push_back(Players[2].Name);
+        Winners.push_back(Players[3].Name);
+    }else if(sum[1] == sum[2] && sum[1] < sum[3] && sum[1] < sum[0]){
+        Winners.push_back(Players[1].Name);
+        Winners.push_back(Players[2].Name);
+    }else if(sum[1] == sum[3] && sum[1] < sum[2] && sum[1] < sum[0]){
+        Winners.push_back(Players[1].Name);
+        Winners.push_back(Players[3].Name);
+    }else if(sum[1] < sum[2] && sum[1] < sum[3] && sum[1] < sum[0]){
+        Winners.push_back(Players[1].Name);
+    }else if(sum[2] == sum[3] && sum[2] < sum[1] && sum[2] < sum[0]){
+        Winners.push_back(Players[2].Name);
+        Winners.push_back(Players[3].Name);
+    }else if(sum[2] < sum[3] && sum[2] < sum[1] && sum[2] < sum[0]){
+        Winners.push_back(Players[2].Name);
+    }else if(sum[3] < sum[2] && sum[3] < sum[1] && sum[3] < sum[0]){
+        Winners.push_back(Players[3].Name);
+    }
+}*/
